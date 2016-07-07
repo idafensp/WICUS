@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:VMImage" "base:ScientificVirtualAppliance" "base:InfrastructureProvider" "base:ImageAppliance" ; /*classes style*/
+	"base:VMImage" -> "rdfs:Literal" [ label = "base:vmId" ];
+	"base:ScientificVirtualAppliance" -> "base:ImageAppliance" [ label = "base:isSupportedBy" ];
+	"base:ImageAppliance" -> "base:InfrastructureProvider" [ label = "base:providedBy" ];
+	"base:ImageAppliance" -> "base:VMImage" [ label = "base:hasVMImage" ];
+
+}

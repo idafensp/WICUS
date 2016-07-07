@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "owl:Thing" "base:Storage" "base:Network" "base:Memory" "base:HardwareComponent" "base:CPU" ; /*classes style*/
+	"base:HardwareComponent" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:CPU" -> "base:HardwareComponent" [ label = "rdfs:subClassOf" ];
+	"base:Network" -> "base:HardwareComponent" [ label = "rdfs:subClassOf" ];
+	"base:Storage" -> "base:HardwareComponent" [ label = "rdfs:subClassOf" ];
+	"base:Memory" -> "base:HardwareComponent" [ label = "rdfs:subClassOf" ];
+
+}

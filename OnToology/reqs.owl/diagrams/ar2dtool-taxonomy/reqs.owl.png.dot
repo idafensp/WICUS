@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "p-plan:Step" "base:AbstractWorkflow" "base:SoftwareRequirements" "base:WorkflowStep" "base:HardwareRequirements" "base:ExecutionEnvironment" "owl:Thing" "base:ConcreteWorkflow" "p-plan:Plan" "base:Workflow" ; /*classes style*/
+	"base:SoftwareRequirements" -> "base:ExecutionEnvironment" [ label = "rdfs:subClassOf" ];
+	"base:ExecutionEnvironment" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:WorkflowStep" -> "p-plan:Step" [ label = "rdfs:subClassOf" ];
+	"base:Workflow" -> "p-plan:Plan" [ label = "rdfs:subClassOf" ];
+	"base:HardwareRequirements" -> "base:ExecutionEnvironment" [ label = "rdfs:subClassOf" ];
+	"base:ConcreteWorkflow" -> "base:Workflow" [ label = "rdfs:subClassOf" ];
+	"base:AbstractWorkflow" -> "base:Workflow" [ label = "rdfs:subClassOf" ];
+
+}

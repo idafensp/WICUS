@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "owl:Thing" "base:VMImage" "base:InfrastructureProvider" "base:ImageAppliance" ; /*classes style*/
+	"base:VMImage" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:ImageAppliance" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:InfrastructureProvider" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+
+}

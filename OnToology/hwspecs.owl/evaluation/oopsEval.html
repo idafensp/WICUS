@@ -56,58 +56,7 @@
 <dt><span class="label label-warning">Important</span></dt> <dd> Though not critical for ontology function, it is important to correct this type of pitfall.</dd>
 
 <dt><span class="label label-minor">Minor</span></dt> <dd>It is not really a problem, but by correcting it we will make the ontology nicer.</dd>
-</dl><h2>Evaluation results</h2>
-<div class="panel-group" id="accordion">
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse0">
-P08. Missing annotations<span style="float: right;">11 cases detected. <span class="label label-minor">Minor</span></span></a>
-</h4>
-</div>
-<div id="collapse0" class="panel-collapse collapse">
-<div class="panel-body">
-<p>Ontology terms lack annotations properties. This kind of properties improves the ontology understanding and usability from a user point of view.</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href="http://purl.org/net/wicus-hwspecs#Feature" target="_blank">http://purl.org/net/wicus-hwspecs#Feature</a></li><li><a href="http://purl.org/net/wicus-hwspecs#Memory" target="_blank">http://purl.org/net/wicus-hwspecs#Memory</a></li><li><a href="http://purl.org/net/wicus-hwspecs#HardwareComponent" target="_blank">http://purl.org/net/wicus-hwspecs#HardwareComponent</a></li><li><a href="http://purl.org/net/wicus-hwspecs#unit" target="_blank">http://purl.org/net/wicus-hwspecs#unit</a></li><li><a href="http://purl.org/net/wicus-hwspecs#hasHardwareComponent" target="_blank">http://purl.org/net/wicus-hwspecs#hasHardwareComponent</a></li><li><a href="http://purl.org/net/wicus-hwspecs#value" target="_blank">http://purl.org/net/wicus-hwspecs#value</a></li><li><a href="http://purl.org/net/wicus-hwspecs#Storage" target="_blank">http://purl.org/net/wicus-hwspecs#Storage</a></li><li><a href="http://purl.org/net/wicus-hwspecs#CPU" target="_blank">http://purl.org/net/wicus-hwspecs#CPU</a></li><li><a href="http://purl.org/net/wicus-hwspecs#hasFeature" target="_blank">http://purl.org/net/wicus-hwspecs#hasFeature</a></li><li><a href="http://purl.org/net/wicus-hwspecs#HardwareSpec" target="_blank">http://purl.org/net/wicus-hwspecs#HardwareSpec</a></li><li><a href="http://purl.org/net/wicus-hwspecs#Network" target="_blank">http://purl.org/net/wicus-hwspecs#Network</a></li></ul></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse1">
-P10. Missing disjointness [1, 2, 3]<span style="float: right;"> ontology *<span class="label label-warning">Important</span></span></a>
-</h4>
-</div>
-<div id="collapse1" class="panel-collapse collapse">
-<div class="panel-body">
-<p>The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. For example, we can create the classes "Odd" and "Even" (or the classes "Prime" and "Composite") without being disjoint; such representation is not correct based on the definition of these types of numbers.</p><p>*This pitfall applies to the ontology in general instead of specific elements</p></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse2">
-P13. Missing inverse relationships<span style="float: right;">2 cases detected. <span class="label label-minor">Minor</span></span></a>
-</h4>
-</div>
-<div id="collapse2" class="panel-collapse collapse">
-<div class="panel-body">
-<p>This pitfall appears when a relationship (except for the symmetric ones) has not an inverse relationship defined within the ontology. For example, the case in which the ontology developer omits the inverse definition between the relations "hasLanguageCode" and "isCodeOf", or between "hasReferee" and "isRefereeOf".</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href="http://purl.org/net/wicus-hwspecs#hasHardwareComponent" target="_blank">http://purl.org/net/wicus-hwspecs#hasHardwareComponent</a></li><li><a href="http://purl.org/net/wicus-hwspecs#hasFeature" target="_blank">http://purl.org/net/wicus-hwspecs#hasFeature</a></li><ul></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse3">
-P30. Missing equivalent classes<span style="float: right;">1 case detected. <span class="label label-warning">Important</span></span></a>
-</h4>
-</div>
-<div id="collapse3" class="panel-collapse collapse">
-<div class="panel-body">
-<p>When an ontology is imported into another, classes with the same conceptual meaning that are duplicated in both ontologies should be defined as equivalent classes to benefit the interoperability between both ontologies. However, the ontology developer misses the definition of equivalent classes in the cases of duplicated concepts. An example of this pitfall can be not to have the equivalent knowledge explicitly defined between "Trainer" (class in the imported ontology) and "Coach" (class in the ontology about sports being developed). </p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href="http://purl.org/net/wicus-hwspecs#Memory" target="_blank">http://purl.org/net/wicus-hwspecs#Memory</a> , <a href="http://purl.org/net/wicus-hwspecs#Storage" target="_blank">http://purl.org/net/wicus-hwspecs#Storage</a></li><ul></div>
-</div>
-</div>
-</div>
-<p>References:</p>
+</dl><p>References:</p>
     <ul>
     <li>
     [1] G&oacute;mez-P&oacute;rez, A. Ontology Evaluation. Handbook on Ontologies. S. Staab and R. Studer Editors. Springer. International Handbooks on Information Systems. Pp: 251-274. 2004.
@@ -135,7 +84,7 @@ P30. Missing equivalent classes<span style="float: right;">1 case detected. <spa
 	        <br>
     	Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
 	        <br>
-           Integration with Widoco by <a href="http://delicias.dia.fi.upm.es/members/DGarijo/">Daniel Garijo</a>	        <br>
+           Integration with Widoco by <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a>	        <br>
         </div>
     	<div class="col-md-5">
 		<p class="text-right"> Developed with: </p>

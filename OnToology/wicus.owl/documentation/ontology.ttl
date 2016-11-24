@@ -1,0 +1,104 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix :        <http://purl.org/net/wicus#> .
+@prefix wreq:    <http://purl.org/net/wicus-reqs#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix wsva:    <http://purl.org/net/wicus-sva#> .
+@prefix whw:     <http://purl.org/net/wicus-hwspecs#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix wstack:  <http://purl.org/net/wicus-stack#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:requiresHardware
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:requiresHardware links a wstack:SoftwareComponent to a whw:HardwareSpec that defines the necessary hardware characteristics for deploying it."^^rdfs:Literal ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range whw:HardwareSpec .
+
+terms:license
+      a       owl:AnnotationProperty .
+
+wreq:SoftwareRequirements
+      a       owl:Class .
+
+wsva:ImageAppliance
+      a       owl:Class .
+
+wstack:SoftwareStack
+      a       owl:Class .
+
+vann:preferredNamespaceUri
+      a       owl:AnnotationProperty .
+
+wreq:HardwareRequirements
+      a       owl:Class .
+
+wsva:ScientificVirtualAppliance
+      a       owl:Class .
+
+<http://purl.org/net/wicus>
+      a       owl:Ontology ;
+      dc:creator "http://delicias.dia.fi.upm.es/~isantana/"^^xsd:anyURI ;
+      dc:title "The Workflow Infrastructure Conservation Using Semantics ontology" ;
+      terms:created "2013-06-14"^^xsd:date ;
+      terms:description """The WICUS ontology network is a set of ontologies designed to represent the information about the computational infrastructure involved on the execution of computational scientific experiments modelled as scientific workflows.
+""" ;
+      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+      terms:modified "2013-07-08"^^xsd:date ;
+      vann:preferredNamespacePrefix
+              "wicus" ;
+      vann:preferredNamespaceUri
+              "http://purl.org/net/wicus#" ;
+      owl:imports <http://purl.org/net/wicus-stack> , <http://purl.org/net/wicus-hwspecs> , <http://purl.org/net/wicus-reqs> , <http://purl.org/net/wicus-sva> ;
+      owl:versionInfo "1.0" .
+
+whw:HardwareSpec
+      a       owl:Class .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+:composedBySoftwareStack
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:composedBySoftwareStack links a wreq:SoftwareRequirements to a wstack:SoftwareStack defining the required software characteristics."^^rdfs:Literal ;
+      rdfs:domain wreq:SoftwareRequirements ;
+      rdfs:range wstack:SoftwareStack .
+
+dc:creator
+      a       owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix
+      a       owl:AnnotationProperty .
+
+:hasSoftwareStack
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:hasSoftwareStack links a wsva:ScientificVirtualAppliance to a wstack:SoftwareStack defining the software characteristics of a scientific appliance."^^rdfs:Literal ;
+      rdfs:domain wsva:ScientificVirtualAppliance ;
+      rdfs:range wstack:SoftwareStack .
+
+:hasHardwareSpecs
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:hasHardwareSpecs links a wsva:ImageAppliance to a whw:HardwareSpec that defines the image hardware capabilities."^^rdfs:Literal ;
+      rdfs:domain wsva:ImageAppliance ;
+      rdfs:range whw:HardwareSpec .
+
+:composedByHardwareSpec
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:composedByHardwareSpec links a wreq:HardwareRequirements to a whw:HardwareSpec defining the required hardware characteristics."^^rdfs:Literal ;
+      rdfs:domain wreq:HardwareRequirements ;
+      rdfs:range whw:HardwareSpec .
+
+terms:modified
+      a       owl:AnnotationProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+wstack:SoftwareComponent
+      a       owl:Class .
+
+terms:description
+      a       owl:AnnotationProperty .
